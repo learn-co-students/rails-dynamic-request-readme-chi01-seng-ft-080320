@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+puts "💣 Deleting old data"
+Post.destroy_all
+
+puts "Seeding Posts"
+
+10.times do 
+  Post.create(
+    title: "same title",
+    description: "same description"
+  )
+end
+
+
+
+puts "done seeding"
